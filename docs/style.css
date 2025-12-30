@@ -1,156 +1,77 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-html{
-    font-size: 62.5%;
-}
-
-body{
-    width: 100%;
-    height: 100vh;
-    overflow-x: hidden;
-    background-color: black;
-    color: white;
-}
-
-/* ---------------- HEADER ---------------- */
-
-header{
-    margin-top: 20px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 1rem 9%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-}
-
-.logo{
-    font-size: 3rem;
-    color: #b74b4b;
-    font-weight: 800;
-}
-
-/* ---------------- HOME ---------------- */
-
-section{
-    min-height: 100vh;
-    padding: 5rem 9% 5rem;
-}
-
-.home{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8rem;
-}
-
-/* NAME */
-.home-content h1{
-    font-size: 6rem;
-    font-weight: 700;
-}
-
-/* 🔽 REDUCED SIZE FOR "I work on" */
-.home-content h3{
-    font-size: 2.8rem;   /* reduced */
-    font-weight: 500;
-}
-
-/* ---------------- TYPING EFFECT ---------------- */
+/* ================= TYPING TEXT ================= */
 
 .typing-text{
+    font-size: 2.6rem; /* reduced size of "I work on" */
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.typing-text span{
+    position: relative;
     display: inline-block;
     overflow: hidden;
     vertical-align: bottom;
 }
 
-.typing-text span{
-    display: inline-block;
-    color: #b74b4b;
-    white-space: nowrap;
-    border-right: 3px solid #b74b4b;
-
-    /* typing animation */
-    animation: typing 20s steps(20) infinite,
-               blink 0.7s infinite;
-}
-
 /* WORDS */
 .typing-text span::before{
     content: "Mechatronics Engineering";
+    color: #b74b4b;
     animation: words 20s infinite;
 }
 
-/* CURSOR */
-@keyframes blink{
-    50% { border-color: transparent; }
+/* CURSOR + ERASER */
+.typing-text span::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    border-left: 2px solid #b74b4b;
+    animation: typing 20s steps(30) infinite;
 }
 
-/* TYPING + ERASING */
+/* Cursor blink */
+@keyframes cursor{
+    50%{
+        border-left-color: transparent;
+    }
+}
+
+/* Typing + Deleting */
 @keyframes typing{
-    0%   { width: 0; }
-    10%  { width: 22ch; }
-    25%  { width: 22ch; }
-    35%  { width: 0; }
+    0%   { width: 100%; }
+    10%  { width: 0%; }
+    20%  { width: 0%; }
+    30%  { width: 100%; }
 
-    40%  { width: 0; }
-    50%  { width: 10ch; }
-    65%  { width: 10ch; }
-    75%  { width: 0; }
+    40%  { width: 100%; }
+    50%  { width: 0%; }
+    60%  { width: 0%; }
+    70%  { width: 100%; }
 
-    80%  { width: 0; }
-    90%  { width: 8ch; }
-    100% { width: 0; }
+    80%  { width: 100%; }
+    90%  { width: 0%; }
+    100% { width: 100%; }
 }
 
-/* WORD CHANGES */
+/* Word switching */
 @keyframes words{
-    0%, 33%{
+    0%, 20%{
         content: "Mechatronics Engineering";
     }
-    34%, 66%{
-        content: "Robotics & Drones";
+    21%, 40%{
+        content: "Robotics";
     }
-    67%, 100%{
-        content: "IoT & Automation";
+    41%, 60%{
+        content: "Drones";
     }
-}
-
-/* ---------------- IMAGE ---------------- */
-
-.home-img img{
-    width: 32vw;
-    border-radius: 50%;
-    box-shadow: 0 0 25px #b74b4b;
-}
-
-/* ---------------- RESPONSIVE ---------------- */
-
-@media(max-width: 995px){
-    .home{
-        flex-direction: column;
-        gap: 4rem;
+    61%, 80%{
+        content: "IoT";
     }
-
-    .home-content h1{
-        font-size: 4.5rem;
-    }
-
-    .home-content h3{
-        font-size: 2.2rem;
-    }
-
-    .home-img img{
-        width: 70vw;
+    81%, 100%{
+        content: "Automation";
     }
 }
