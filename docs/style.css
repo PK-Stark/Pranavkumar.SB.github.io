@@ -226,13 +226,13 @@ span{
 
 @keyframes words{
     0%, 20%{
-        content: "Mechatronivs Engineer";
+        content: "Mechatronics Engineer";
     }
     21%, 40%{
         content: "Entrepreneur";
     }
     41%, 60%{
-        content: "Web Designer";
+        content: "Drone specialist";
     }
     61%, 80%{
         content: "Youtuber";
