@@ -37,16 +37,17 @@ header{
     z-index: 100;
 }
 
-.logo{
-    font-size: 3rem;
-    color: #b74b4b;
-    font-weight: 800;
-    cursor: pointer;
-    transition: 0.5s ease;
+.logo img {
+    height: 48px;          /* adjust if needed */
+    width: auto;
+    display: block;
+    filter: drop-shadow(0 0 12px rgba(255, 0, 0, 0.8));
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.logo:hover{
-    transform: scale(1.1);
+.logo img:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 20px rgba(255, 0, 0, 1));
 }
 
 nav a{
