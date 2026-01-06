@@ -1,5 +1,5 @@
 const words = [
-  "Mechatronics Syatems",
+  "Mechatronics Systems",
   "Robotics",
   "Drones",
   "Automation",
