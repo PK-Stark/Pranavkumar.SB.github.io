@@ -201,12 +201,6 @@ span{
     position: relative;
 }
 
-.typing-text span::before{
-    content: "software Developer";
-    color: #b74b4b;
-    animation: words 20s infinite;
-}
-
 /* === Typing Text (only this section modified) === */
 
 .typing-text{
