@@ -1,36 +1,38 @@
-/* === Typing Text (ONLY SECTION MODIFIED) === */
+const words = [
+  "Mechatronics Engineering",
+  "Robotics",
+  "Drones",
+  "Automation",
+  "IoT Systems"
+];
 
-.home-content h3{
-    font-size: 3rem;   /* reduced size for "I work on" */
-    font-weight: 600;
-    white-space: nowrap; /* prevents line break */
+let wordIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+const typedText = document.querySelector(".typing-text span");
+
+function typeEffect() {
+  const currentWord = words[wordIndex];
+
+  if (!isDeleting) {
+    typedText.textContent = currentWord.substring(0, charIndex + 1);
+    charIndex++;
+
+    if (charIndex === currentWord.length) {
+      setTimeout(() => isDeleting = true, 1200);
+    }
+  } else {
+    typedText.textContent = currentWord.substring(0, charIndex - 1);
+    charIndex--;
+
+    if (charIndex === 0) {
+      isDeleting = false;
+      wordIndex = (wordIndex + 1) % words.length;
+    }
+  }
+
+  setTimeout(typeEffect, isDeleting ? 50 : 90);
 }
 
-.typing-text{
-    display: inline-block;
-    font-size: 3.2rem;     /* animated text size */
-    font-weight: 600;
-    white-space: nowrap;  /* keeps text in one line */
-    overflow: hidden;
-}
-
-.typing-text span{
-    color: #b74b4b;
-    position: relative;
-    padding-right: 6px;
-}
-
-/* cursor */
-.typing-text span::after{
-    content: "";
-    position: absolute;
-    right: -4px;
-    width: 2px;
-    height: 100%;
-    background: #b74b4b;
-    animation: blink 0.7s infinite;
-}
-
-@keyframes blink{
-    50%{ opacity: 0; }
-}
+typeEffect();
