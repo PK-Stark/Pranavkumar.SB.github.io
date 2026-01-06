@@ -201,6 +201,8 @@ span{
     position: relative;
 }
 
+/* === Typing Text (only this section modified) === */
+
 .typing-text{
     font-size: 34px;
     font-weight: 600;
@@ -208,72 +210,9 @@ span{
 }
 
 .typing-text span{
-    position: relative;
-    display: inline-block;
     color: #b74b4b;
-    overflow: hidden;
-    vertical-align: bottom;
-    white-space: nowrap;
     border-right: 3px solid #b74b4b;
-
-    animation: typing 25s steps(30) infinite,
-               blink 0.7s infinite;
-}
-
-/* Inject words */
-.typing-text span::before{
-    content: "Mechatronics Engineering";
-    animation: words 25s infinite;
-}
-
-/* Cursor blink */
-@keyframes blink{
-    50% { border-color: transparent; }
-}
-
-/* Typing + deleting illusion */
-@keyframes typing{
-    /* Mechatronics Engineering */
-    0%   { width: 0; }
-    10%  { width: 26ch; }
-    20%  { width: 26ch; }
-    30%  { width: 0; }
-
-    /* Robotics */
-    35%  { width: 0; }
-    42%  { width: 8ch; }
-    50%  { width: 8ch; }
-    58%  { width: 0; }
-
-    /* Drones */
-    62%  { width: 0; }
-    68%  { width: 6ch; }
-    74%  { width: 6ch; }
-    80%  { width: 0; }
-
-    /* Automation */
-    83%  { width: 0; }
-    90%  { width: 10ch; }
-    100% { width: 0; }
-}
-
-/* Word cycle */
-@keyframes words{
-    0%, 25%{
-        content: "Mechatronics Engineering";
-    }
-    26%, 45%{
-        content: "Robotics";
-    }
-    46%, 65%{
-        content: "Drones";
-    }
-    66%, 85%{
-        content: "Automation";
-    }
-    86%, 100%{
-        content: "IoT Systems";
-    }
+    padding-right: 5px;
 }
 
    
