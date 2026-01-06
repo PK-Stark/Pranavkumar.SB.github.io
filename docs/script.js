@@ -20,7 +20,8 @@ function typeEffect() {
     charIndex++;
 
     if (charIndex === currentWord.length) {
-      setTimeout(() => isDeleting = true, 1200);
+      setTimeout(() => isDeleting = true, 800);
+
     }
   } else {
     typedText.textContent = currentWord.substring(0, charIndex - 1);
@@ -32,7 +33,8 @@ function typeEffect() {
     }
   }
 
-  setTimeout(typeEffect, isDeleting ? 50 : 90);
+  setTimeout(typeEffect, isDeleting ? 35 : 65);
+
 }
 
 typeEffect();
