@@ -243,35 +243,21 @@ span{
     }
 }
 .about {
-  min-height: 100vh;
-  padding: 10rem 9%;
-  display: flex;
-  align-items: center;
-  background-color: black;
-}
-
-.about-container {
+  padding: 8rem 9%;
   max-width: 900px;
 }
 
 .section-title {
-  font-size: 4.2rem;
-  font-weight: 700;
+  font-size: 4rem;
   margin-bottom: 3rem;
-}
-
-.section-title span {
   color: #b74b4b;
 }
 
-.about-text {
+.about p {
   font-size: 1.6rem;
   line-height: 1.8;
-  color: #d0d0d0;
   margin-bottom: 2rem;
+  color: #e0e0e0;
 }
 
-.about-text strong {
-  color: #ffffff;
-}
 
