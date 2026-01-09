@@ -242,6 +242,24 @@ span{
         margin-top: 4rem;
     }
 }
+.about-title {
+  font-size: 3.2rem;        /* Bigger */
+  font-weight: 700;         /* Bold */
+  margin-bottom: 2rem;
+  color: #ffffff;
+  position: relative;
+}
+
+/* Optional subtle red accent underline */
+.about-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #b74b4b;
+  margin-top: 0.6rem;
+}
+
 .about-container {
   display: flex;
   align-items: center;
