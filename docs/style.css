@@ -248,6 +248,7 @@ span{
   margin-bottom: 2rem;
   color: #ffffff;
   position: relative;
+  text-shadow: 0 0 10px rgba(183, 75, 75, 0.6);
 }
 
 /* Optional subtle red accent underline */
