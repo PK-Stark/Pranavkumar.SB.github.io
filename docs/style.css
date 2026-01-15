@@ -263,23 +263,25 @@ span{
 }
 
 .about-container {
-  display: flex;
-  align-items: center;
-  gap: 5rem;
-}
-.about-container {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 0.9fr 2.2fr 0.9fr;
   align-items: center;
-  gap: 60px;
+  gap: 50px;
 }
 
+
 /* Stark Tech logo block */
-.about-logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.about-logo img {
+  width: 220px;              /* smaller */
+  opacity: 0.18;             /* subtle */
+  filter: grayscale(10%) drop-shadow(0 0 20px rgba(255, 0, 0, 0.35));
+  transition: all 0.4s ease;
 }
+.about-logo img:hover {
+  opacity: 0.35;
+  transform: scale(1.03);
+}
+
 
 /* Logo styling */
 .about-logo img {
@@ -294,6 +296,12 @@ span{
   opacity: 0.4;
   transform: scale(1.05);
 }
+.about-logo {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
 
 
 .about-image img {
@@ -305,6 +313,13 @@ span{
 .about-content {
   flex: 1;
   max-width: 700px;
+}
+.about-content {
+  max-width: 720px;
+}
+
+.about-content p {
+  line-height: 1.7;
 }
 
 .about-text {
