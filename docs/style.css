@@ -307,20 +307,26 @@ span{
   text-align: center;
 }
 .section-title {
+  text-align: center;
   font-size: 3.2rem;
   font-weight: 700;
-  color: white;
   margin-bottom: 4rem;
   position: relative;
 }
+
 
 .section-title::after {
   content: "";
   display: block;
   width: 60px;
   height: 3px;
-  background: #b74b4b;
-  margin: 1.2rem auto 0;
+  background: #e63946; /* your red */
+  margin: 1rem auto 0; /* THIS centers the line */
+  border-radius: 2px;
+}
+.section-title {
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 
