@@ -243,23 +243,24 @@ span{
     }
 }
 .about-title {
-  font-size: 3.2rem;        /* Bigger */
-  font-weight: 700;         /* Bold */
-  margin-bottom: 2rem;
+  font-size: 3.6rem;          /* slightly bigger */
+  font-weight: 700;
+  margin-bottom: 4rem;
   color: #ffffff;
   position: relative;
+  text-align: center;         /* ✅ CENTER TEXT */
 }
 
-/* Optional subtle red accent underline */
+/* Centered red underline */
 .about-title::after {
   content: "";
   display: block;
-  width: 60px;
+  width: 70px;
   height: 3px;
   background: #b74b4b;
-  margin-top: 0.6rem;
+  margin: 1rem auto 0;        /* ✅ centers underline */
+  border-radius: 2px;
 }
-
 
 .about-container {
   display: flex;
