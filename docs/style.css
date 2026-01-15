@@ -272,10 +272,10 @@ span{
 
 /* Stark Tech logo block */
 .about-logo img {
-  width: 220px;              /* smaller */
-  opacity: 0.18;             /* subtle */
-  filter: grayscale(10%) drop-shadow(0 0 20px rgba(255, 0, 0, 0.35));
-  transition: all 0.4s ease;
+  width: 260px; /* strong but not overpowering */
+  opacity: 1;   /* original brightness */
+  filter: drop-shadow(0 0 35px rgba(255, 215, 100, 0.45));
+  transition: transform 0.4s ease;
 }
 .about-logo img:hover {
   opacity: 0.35;
