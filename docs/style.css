@@ -267,6 +267,34 @@ span{
   align-items: center;
   gap: 5rem;
 }
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  gap: 60px;
+}
+
+/* Stark Tech logo block */
+.about-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Logo styling */
+.about-logo img {
+  width: 260px;
+  opacity: 0.22;
+  filter: drop-shadow(0 0 25px rgba(255, 0, 0, 0.5));
+  transition: all 0.4s ease;
+}
+
+/* Optional subtle hover (desktop only) */
+.about-logo img:hover {
+  opacity: 0.4;
+  transform: scale(1.05);
+}
+
 
 .about-image img {
   width: 260px;
