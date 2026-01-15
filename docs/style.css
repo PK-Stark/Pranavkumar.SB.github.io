@@ -271,38 +271,27 @@ span{
 
 
 /* Stark Tech logo block */
+/* Logo styling */
 .about-logo img {
-  width: 260px; /* strong but not overpowering */
-  opacity: 1;   /* original brightness */
-  filter: drop-shadow(0 0 35px rgba(255, 215, 100, 0.45));
+  width: 320px;              /* Bigger but balanced */
+  height: auto;
+  opacity: 1;                /* FULL ORIGINAL */
+  filter: none;              /* REMOVE dulling */
+  mix-blend-mode: normal;    /* IMPORTANT */
+  box-shadow: 
+    0 0 35px rgba(255, 215, 100, 0.35),
+    0 0 80px rgba(0, 0, 0, 0.6);
   transition: transform 0.4s ease;
 }
 .about-logo img:hover {
-  opacity: 0.35;
-  transform: scale(1.03);
+  transform: scale(1.06);
 }
 
-
-/* Logo styling */
-.about-logo img {
-  width: 260px;
-  opacity: 0.22;
-  filter: drop-shadow(0 0 25px rgba(255, 0, 0, 0.5));
-  transition: all 0.4s ease;
-}
-
-/* Optional subtle hover (desktop only) */
-.about-logo img:hover {
-  opacity: 0.4;
-  transform: scale(1.05);
-}
 .about-logo {
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
 }
-
-
 
 .about-image img {
   width: 260px;
