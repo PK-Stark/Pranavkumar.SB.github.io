@@ -441,5 +441,85 @@ span{
   }
 }
 
+.experience {
+  padding: 90px 8%;
+}
+
+.experience-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.experience-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 0, 0, 0.25);
+  border-radius: 18px;
+  padding: 30px;
+}
+
+.experience-card h3 {
+  font-size: 1.9rem;
+  margin-bottom: 6px;
+}
+
+.company {
+  color: #ff4d4d;
+  font-weight: 600;
+  display: block;
+}
+
+.duration {
+  font-size: 1.2rem;
+  opacity: 0.7;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.experience-card p {
+  font-size: 1.45rem;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.experience-card ul {
+  padding-left: 18px;
+}
+
+.experience-card ul li {
+  font-size: 1.35rem;
+  margin-bottom: 8px;
+}
+
+
+.teaching {
+  padding: 90px 8%;
+}
+
+.teaching-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.teaching-card {
+  background: rgba(255, 255, 255, 0.03);
+  border-left: 4px solid #ff4d4d;
+  border-radius: 14px;
+  padding: 28px;
+}
+
+.teaching-card h3 {
+  color: #ff4d4d;
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+}
+
+.teaching-card p {
+  font-size: 1.45rem;
+  line-height: 1.7;
+}
 
 
