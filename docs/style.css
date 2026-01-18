@@ -441,85 +441,68 @@ span{
   }
 }
 
+/* Experience Section */
 .experience {
-  padding: 90px 8%;
+  padding: 100px 8%;
 }
 
-.experience-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+/* Vertical stack */
+.experience-vertical {
+  display: flex;
+  flex-direction: column;
   gap: 30px;
-  margin-top: 50px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
+/* Card */
 .experience-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 0, 0, 0.25);
-  border-radius: 18px;
-  padding: 30px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 0, 0, 0.35);
+  border-radius: 16px;
+  padding: 28px 30px;
+  transition: all 0.3s ease;
 }
 
+/* Hover effect (subtle) */
+.experience-card:hover {
+  border-color: #ff3b3b;
+  transform: translateY(-4px);
+}
+
+/* Titles */
 .experience-card h3 {
-  font-size: 1.9rem;
-  margin-bottom: 6px;
+  font-size: 1.4rem;
+  margin-bottom: 4px;
 }
 
+/* Meta info */
 .company {
-  color: #ff4d4d;
-  font-weight: 600;
+  color: #ff3b3b;
+  font-weight: 500;
   display: block;
 }
 
 .duration {
-  font-size: 1.2rem;
+  font-size: 0.85rem;
   opacity: 0.7;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
   display: block;
 }
 
+/* Description */
 .experience-card p {
-  font-size: 1.45rem;
-  line-height: 1.7;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
+  line-height: 1.6;
 }
 
+/* Bullet points */
 .experience-card ul {
-  padding-left: 18px;
+  padding-left: 20px;
 }
 
 .experience-card ul li {
-  font-size: 1.35rem;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
+  line-height: 1.5;
 }
-
-
-.teaching {
-  padding: 90px 8%;
-}
-
-.teaching-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
-  margin-top: 50px;
-}
-
-.teaching-card {
-  background: rgba(255, 255, 255, 0.03);
-  border-left: 4px solid #ff4d4d;
-  border-radius: 14px;
-  padding: 28px;
-}
-
-.teaching-card h3 {
-  color: #ff4d4d;
-  font-size: 1.8rem;
-  margin-bottom: 12px;
-}
-
-.teaching-card p {
-  font-size: 1.45rem;
-  line-height: 1.7;
-}
-
 
