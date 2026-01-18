@@ -446,37 +446,43 @@ span{
   padding: 100px 8%;
 }
 
-/* Vertical stack */
-.experience-vertical {
+/* Horizontal layout */
+.experience-row {
   display: flex;
-  flex-direction: column;
   gap: 30px;
-  max-width: 900px;
-  margin: 0 auto;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap; /* allows wrapping on small screens */
 }
 
 /* Card */
 .experience-card {
+  flex: 1;
+  min-width: 280px;
+  max-width: 380px;
+
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 0, 0, 0.35);
   border-radius: 16px;
   padding: 28px 30px;
+
+  text-align: left; /* 👈 THIS fixes your centering issue */
   transition: all 0.3s ease;
 }
 
-/* Hover effect (subtle) */
+/* Hover */
 .experience-card:hover {
   border-color: #ff3b3b;
-  transform: translateY(-4px);
+  transform: translateY(-6px);
 }
 
 /* Titles */
 .experience-card h3 {
-  font-size: 1.4rem;
-  margin-bottom: 4px;
+  font-size: 1.35rem;
+  margin-bottom: 6px;
 }
 
-/* Meta info */
+/* Meta */
 .company {
   color: #ff3b3b;
   font-weight: 500;
@@ -490,13 +496,13 @@ span{
   display: block;
 }
 
-/* Description */
+/* Text */
 .experience-card p {
-  margin-bottom: 12px;
   line-height: 1.6;
+  margin-bottom: 12px;
 }
 
-/* Bullet points */
+/* Bullets */
 .experience-card ul {
   padding-left: 20px;
 }
@@ -505,4 +511,3 @@ span{
   margin-bottom: 6px;
   line-height: 1.5;
 }
-
