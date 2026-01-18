@@ -458,8 +458,8 @@ span{
 /* Card */
 .experience-card {
   flex: 1;
-  min-width: 280px;
-  max-width: 380px;
+  width: 380px;
+  max-width: 100%;    
 
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 0, 0, 0.35);
