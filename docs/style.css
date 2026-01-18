@@ -449,11 +449,15 @@ span{
 /* Horizontal layout */
 .experience-row {
   display: flex;
-  gap: 30px;
-  justify-content: space-between;
-  align-items: stretch;
-  flex-wrap: wrap; /* allows wrapping on small screens */
+  flex-direction: row; /* 🔑 force horizontal */
 }
+.experience-row {
+  justify-content: center;
+}
+.experience-row {
+  justify-content: space-evenly;
+}
+
 
 /* Card */
 .experience-card {
