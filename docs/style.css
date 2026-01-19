@@ -441,77 +441,81 @@ span{
   }
 }
 
-/* Experience Section */
+/* EXPERIENCE SECTION */
 .experience {
-  padding: 100px 8%;
+  padding: 80px 6%;
 }
 
-/* Horizontal layout */
-.experience-row {
-  display: flex;
-  flex-direction: row; /* 🔑 force horizontal */
-}
-.experience-row {
-  justify-content: center;
-}
-.experience-row {
-  justify-content: space-evenly;
+.experience .section-title {
+  text-align: center;
+  margin-bottom: 50px;
 }
 
+/* Container forces horizontal layout */
+.experience-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
 
-/* Card */
+/* Card styling */
 .experience-card {
-  flex: 1;
-  min-width: 280px;
-  max-width: 380px;   
-
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 0, 0, 0.35);
+  background: #0c0c0c;
+  border: 1px solid rgba(255, 0, 0, 0.25);
   border-radius: 16px;
-  padding: 28px 30px;
-
-  text-align: left; /* 👈 THIS fixes your centering issue */
-  transition: all 0.3s ease;
+  padding: 24px;
+  transition: transform 0.3s ease, border 0.3s ease;
 }
 
-/* Hover */
 .experience-card:hover {
-  border-color: #ff3b3b;
   transform: translateY(-6px);
+  border-color: #ff1e1e;
 }
 
-/* Titles */
+/* Text alignment FIX (important) */
+.experience-card h3,
+.experience-card span,
+.experience-card ul {
+  text-align: left;
+}
+
 .experience-card h3 {
-  font-size: 1.35rem;
+  font-size: 1.1rem;
   margin-bottom: 6px;
 }
 
-/* Meta */
-.company {
-  color: #ff3b3b;
-  font-weight: 500;
+.experience-card .company {
+  color: #ff1e1e;
+  font-weight: 600;
   display: block;
 }
 
-.duration {
+.experience-card .duration {
   font-size: 0.85rem;
   opacity: 0.7;
   margin-bottom: 12px;
   display: block;
 }
 
-/* Text */
-.experience-card p {
-  line-height: 1.6;
-  margin-bottom: 12px;
-}
-
-/* Bullets */
 .experience-card ul {
-  padding-left: 20px;
+  padding-left: 18px;
 }
 
-.experience-card ul li {
-  margin-bottom: 6px;
-  line-height: 1.5;
+.experience-card li {
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+/* Responsive fallback */
+@media (max-width: 1200px) {
+  .experience-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .experience-container {
+    grid-template-columns: 1fr;
+  }
 }
