@@ -511,3 +511,75 @@ span{
   margin-bottom: 6px;
   line-height: 1.5;
 }
+
+/* ================================
+   TEACHING / SEMINARS SECTION
+================================ */
+
+.teaching {
+  padding: 80px 8%;
+}
+
+.teaching .section-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.teaching .section-title::after {
+  content: "";
+  width: 40px;
+  height: 3px;
+  background: #ff2e2e;
+  display: block;
+  margin: 10px auto 0;
+}
+
+.teaching-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.teaching-card {
+  background: #0c0c0c;
+  border: 1px solid rgba(255, 46, 46, 0.5);
+  border-radius: 14px;
+  padding: 28px;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.teaching-card:hover {
+  transform: translateY(-6px);
+  border-color: #ff2e2e;
+}
+
+.teaching-card h3 {
+  color: #ff2e2e;
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.teaching-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.teaching-card ul li {
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 16px;
+}
+
+.teaching-card ul li::before {
+  content: "•";
+  color: #ff2e2e;
+  position: absolute;
+  left: 0;
+}
