@@ -554,6 +554,7 @@ span{
   height: 100%;
 }
 
+
 .teaching-card {
   background: #0c0c0c;
   border: 1px solid rgba(255, 46, 46, 0.5);
@@ -593,3 +594,11 @@ span{
   position: absolute;
   left: 0;
 }
+
+@media (max-width: 900px) {
+  .teaching-cards {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+  }
+}
+
