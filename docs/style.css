@@ -512,103 +512,122 @@ span{
   line-height: 1.5;
 }
 
-/* ================================
-   TEACHING / SEMINARS SECTION
-================================ */
+/* ================= TEACHING SECTION ================= */
 
-.teaching {
-  padding: 80px 8%;
-}
-/* FORCE CENTER ALL SECTION HEADINGS */
-.teaching.section-title {
-  width: 100%;
-  text-align: center;
-  margin: 0 auto 50px auto;
-  display: block;
+.teaching-section {
+    width: 90%;
+    max-width: 1300px;
+    margin: 120px auto;
 }
 
+/* Section Heading */
+.section-title {
+    text-align: center;
+    font-size: 34px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 60px;
+    letter-spacing: 1px;
+    position: relative;
+}
 
 .section-title::after {
-  content: "";
-  display: block;
-  width: 40px;
-  height: 3px;
-  background: #ff2b2b;
-  margin: 12px auto 0 auto; /* THIS centers the underline */
+    content: "";
+    width: 60px;
+    height: 3px;
+    background: red;
+    display: block;
+    margin: 12px auto 0;
+    border-radius: 5px;
 }
 
-
-/* ================================
-   TEACHING SECTION – HORIZONTAL
-   ================================ */
-
-#teaching {
-  padding: 80px 20px;
+/* Masonry Grid */
+.masonry {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 200px;
+    gap: 40px;
 }
 
-.teaching-cards {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  gap: 40px;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.teaching-card {
-  width: 280px;
-  background: #0b0b0b;
-  border: 1px solid #ff2b2b;
-  border-radius: 14px;
-  padding: 24px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.teaching-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 0 18px rgba(255, 43, 43, 0.35);
-}
-
-/* ================================
-   MOBILE RESPONSIVE
-   ================================ */
-
-  .teaching-card {
-    width: 90%;
-  }
-}
-
-
-.teaching-card h3 {
-  color: #ff2e2e;
-  font-size: 20px;
-  margin-bottom: 16px;
-}
-
-.teaching-card ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.teaching-card ul li {
-  font-size: 14px;
-  line-height: 1.7;
-  margin-bottom: 8px;
-  position: relative;
-  padding-left: 16px;
-}
-
-.teaching-card ul li::before {
-  content: "•";
-  color: #ff2e2e;
-  position: absolute;
-  left: 0;
-}
-
-@media (max-width: 900px) {
-  .teaching-cards {
-    flex-direction: column;
+/* Large Content Cards */
+.teach-card.large {
+    grid-column: span 3;
+    background: linear-gradient(145deg, #0a0a0a, #141414);
+    border: 1px solid red;
+    border-radius: 14px;
+    padding: 35px;
+    color: white;
+    display: flex;
     align-items: center;
-  }
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.teach-card.large:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.35);
+}
+
+/* Small Image Boxes */
+.teach-img.small {
+    grid-column: span 1;
+    background: linear-gradient(145deg, #101010, #1a1a1a);
+    border: 1px solid red;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.15);
+}
+
+.teach-img.small img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Offset Pattern */
+.offset {
+    grid-column-start: 2;
+}
+
+/* Card Content */
+.teach-card h3 {
+    color: red;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.teach-card ul {
+    padding-left: 20px;
+}
+
+.teach-card li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1100px) {
+    .masonry {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .teach-card.large {
+        grid-column: span 2;
+    }
+    .teach-img.small {
+        grid-column: span 1;
+    }
+    .offset {
+        grid-column-start: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .masonry {
+        grid-template-columns: 1fr;
+    }
+    .teach-card.large,
+    .teach-img.small {
+        grid-column: span 1;
+    }
+}
