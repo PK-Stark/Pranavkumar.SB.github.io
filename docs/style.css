@@ -517,31 +517,31 @@ span{
 .teaching-section {
     width: 90%;
     max-width: 1300px;
-    margin: 120px auto;
+    margin: 120px auto 80px auto;
 }
 
-/* Section Heading */
-.section-title {
+/* ===== Section Heading ===== */
+.teaching-section .section-title {
     text-align: center;
-    font-size: 34px;
+    font-size: 3.2rem;
     font-weight: 700;
-    color: white;
-    margin-bottom: 60px;
+    color: #ffffff;
+    margin-bottom: 6rem;
     letter-spacing: 1px;
     position: relative;
 }
 
-.section-title::after {
+.teaching-section .section-title::after {
     content: "";
     width: 60px;
     height: 3px;
-    background: red;
+    background: #b74b4b; /* softer red */
     display: block;
     margin: 12px auto 0;
     border-radius: 5px;
 }
 
-/* Masonry Grid */
+/* ===== Masonry Grid Layout ===== */
 .masonry {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -549,33 +549,39 @@ span{
     gap: 40px;
 }
 
-/* Large Content Cards */
+/* ===== Large Content Cards ===== */
 .teach-card.large {
     grid-column: span 3;
-    background: linear-gradient(145deg, #0a0a0a, #141414);
-    border: 1px solid red;
-    border-radius: 14px;
+    background: linear-gradient(145deg, #0d0d0d, #161616);
+    border: 1px solid rgba(183, 75, 75, 0.5); /* soft border */
+    border-radius: 16px;
     padding: 35px;
     color: white;
     display: flex;
     align-items: center;
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.15);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: none; /* remove glow */
+    transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
 .teach-card.large:hover {
     transform: translateY(-6px);
-    box-shadow: 0 0 30px rgba(255, 0, 0, 0.35);
+    border-color: #b74b4b;
 }
 
-/* Small Image Boxes */
+/* ===== Small Image Boxes ===== */
 .teach-img.small {
     grid-column: span 1;
-    background: linear-gradient(145deg, #101010, #1a1a1a);
-    border: 1px solid red;
-    border-radius: 14px;
+    background: #121212;
+    border: 1px solid rgba(183, 75, 75, 0.5);
+    border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 0 15px rgba(255, 0, 0, 0.15);
+    box-shadow: none;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.teach-img.small:hover {
+    transform: translateY(-5px);
+    border-color: #b74b4b;
 }
 
 .teach-img.small img {
@@ -584,15 +590,15 @@ span{
     object-fit: cover;
 }
 
-/* Offset Pattern */
+/* ===== Offset Pattern (staggered look) ===== */
 .offset {
     grid-column-start: 2;
 }
 
-/* Card Content */
+/* ===== Card Text Styling ===== */
 .teach-card h3 {
-    color: red;
-    font-size: 22px;
+    color: #b74b4b; /* toned red */
+    font-size: 2.2rem;
     margin-bottom: 15px;
 }
 
@@ -603,6 +609,8 @@ span{
 .teach-card li {
     margin-bottom: 8px;
     line-height: 1.6;
+    font-size: 1.4rem;
+    color: #e0e0e0;
 }
 
 /* ================= RESPONSIVE ================= */
