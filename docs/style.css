@@ -512,36 +512,37 @@ span{
   line-height: 1.5;
 }
 
-/* ================= TEACHING SECTION ================= */
+/* ========================= */
+/* TEACHING SECTION CLEAN UI */
+/* ========================= */
 
 .teaching-section {
     width: 90%;
     max-width: 1300px;
-    margin: 120px auto 80px auto;
+    margin: 120px auto 80px;
 }
 
-/* ===== Section Heading ===== */
+/* ===== SECTION HEADING ===== */
 .teaching-section .section-title {
     text-align: center;
     font-size: 3.2rem;
     font-weight: 700;
     color: #ffffff;
-    margin-bottom: 6rem;
+    margin-bottom: 70px;
     letter-spacing: 1px;
-    position: relative;
 }
 
 .teaching-section .section-title::after {
     content: "";
     width: 60px;
     height: 3px;
-    background: #b74b4b; /* softer red */
+    background: #a53c3c; /* softer red */
     display: block;
-    margin: 12px auto 0;
-    border-radius: 5px;
+    margin: 14px auto 0;
+    border-radius: 4px;
 }
 
-/* ===== Masonry Grid Layout ===== */
+/* ===== MASONRY GRID ===== */
 .masonry {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -549,39 +550,39 @@ span{
     gap: 40px;
 }
 
-/* ===== Large Content Cards ===== */
+/* ===== LARGE CONTENT CARDS ===== */
 .teach-card.large {
     grid-column: span 3;
-    background: linear-gradient(145deg, #0d0d0d, #161616);
-    border: 1px solid rgba(183, 75, 75, 0.5); /* soft border */
+    background: #111111;              /* MATTE background */
+    border: 1px solid rgba(165, 60, 60, 0.4);
     border-radius: 16px;
     padding: 35px;
-    color: white;
+    color: #ffffff;
     display: flex;
     align-items: center;
-    box-shadow: none; /* remove glow */
-    transition: transform 0.3s ease, border-color 0.3s ease;
+    box-shadow: none;                 /* REMOVE glow */
+    transition: transform 0.25s ease, border-color 0.25s ease;
 }
 
 .teach-card.large:hover {
-    transform: translateY(-6px);
-    border-color: #b74b4b;
+    transform: translateY(-5px);
+    border-color: #a53c3c;
 }
 
-/* ===== Small Image Boxes ===== */
+/* ===== SMALL IMAGE BLOCKS ===== */
 .teach-img.small {
     grid-column: span 1;
-    background: #121212;
-    border: 1px solid rgba(183, 75, 75, 0.5);
+    background: #141414;
+    border: 1px solid rgba(165, 60, 60, 0.4);
     border-radius: 16px;
     overflow: hidden;
     box-shadow: none;
-    transition: transform 0.3s ease, border-color 0.3s ease;
+    transition: transform 0.25s ease, border-color 0.25s ease;
 }
 
 .teach-img.small:hover {
     transform: translateY(-5px);
-    border-color: #b74b4b;
+    border-color: #a53c3c;
 }
 
 .teach-img.small img {
@@ -590,16 +591,16 @@ span{
     object-fit: cover;
 }
 
-/* ===== Offset Pattern (staggered look) ===== */
+/* ===== OFFSET PATTERN ===== */
 .offset {
     grid-column-start: 2;
 }
 
-/* ===== Card Text Styling ===== */
+/* ===== TEXT STYLING ===== */
 .teach-card h3 {
-    color: #b74b4b; /* toned red */
+    color: #a53c3c;
     font-size: 2.2rem;
-    margin-bottom: 15px;
+    margin-bottom: 16px;
 }
 
 .teach-card ul {
