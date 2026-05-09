@@ -12,7 +12,7 @@
 
 html {
     font-size: 62.5%;
-    scroll-behavior: smooth; /* Smooth transitions */
+    scroll-behavior: smooth;
 }
 
 body {
@@ -28,7 +28,7 @@ header {
     left: 0;
     width: 100%;
     padding: 1.5rem 9%;
-    background-color: rgba(0, 0, 0, 0.85); /* Semi-transparent */
+    background-color: rgba(0, 0, 0, 0.85);
     backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-between;
@@ -39,8 +39,7 @@ header {
 .logo img {
     height: 30px;
     width: auto;
-    filter: drop-shadow(0 0 10px rgba(183, 75, 75, 0.8));
-    transition: 0.3s ease;
+    filter: drop-shadow(0 0 8px rgba(183, 75, 75, 0.8));
 }
 
 nav a {
@@ -59,7 +58,7 @@ nav a:hover, nav a.active {
 
 section {
     min-height: 100vh;
-    padding: 10rem 9% 5rem; /* Increased top padding for fixed header */
+    padding: 12rem 9% 5rem; /* Space for the fixed header */
 }
 
 .home {
@@ -71,7 +70,7 @@ section {
 
 .home-content h1 {
     font-size: 6rem;
-    font-weight: 700;
+    line-height: 1.2;
 }
 
 span { color: #b74b4b; }
@@ -125,11 +124,12 @@ span { color: #b74b4b; }
     padding-right: 5px;
 }
 
-/* Skills/Experience Grid Logic */
+/* Section Headings */
 .section-title {
     text-align: center;
     font-size: 3.2rem;
     margin-bottom: 4rem;
+    text-transform: uppercase;
 }
 
 .section-title::after {
@@ -141,9 +141,10 @@ span { color: #b74b4b; }
     margin: 1rem auto;
 }
 
+/* Skills/Exp Grids */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 3rem;
 }
 
@@ -151,43 +152,51 @@ span { color: #b74b4b; }
     background: #0c0c0c;
     border: 1px solid rgba(183, 75, 75, 0.4);
     border-radius: 18px;
-    padding: 3rem;
+    padding: 3rem 2rem;
     text-align: center;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
-.skill-card:hover { transform: translateY(-10px); }
+.skill-card:hover { transform: translateY(-10px); border-color: #b74b4b; }
 
 .experience-row {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 2rem;
 }
 
 .experience-card {
-    flex: 1;
-    min-width: 300px;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.03);
     border-left: 4px solid #b74b4b;
-    padding: 2rem;
+    padding: 2.5rem;
     border-radius: 8px;
+    transition: 0.3s;
 }
 
-/* Masonry Teaching */
+.experience-card:hover { background: rgba(255, 255, 255, 0.06); }
+
+.company { color: #b74b4b; font-weight: 600; display: block; margin: 0.5rem 0; font-size: 1.6rem; }
+.duration { font-size: 1.3rem; opacity: 0.7; font-style: italic; }
+
+.experience-card ul { padding-left: 2rem; margin-top: 1rem; }
+.experience-card li { margin-bottom: 0.5rem; line-height: 1.6; font-size: 1.4rem; }
+
+/* Teaching Masonry-ish */
 .masonry {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
 }
 
 .teach-card.large {
     background: #111;
-    padding: 2rem;
-    border: 1px solid #b74b4b;
-    border-radius: 12px;
+    padding: 3rem;
+    border: 1px solid rgba(183, 75, 75, 0.5);
+    border-radius: 15px;
 }
 
-@media (max-width: 768px) {
-    .home { flex-direction: column-reverse; }
-    .home-img img { width: 70vw; }
+@media (max-width: 900px) {
+    .home { flex-direction: column-reverse; text-align: center; }
+    .home-img img { width: 60vw; }
+    .home-content h1 { font-size: 4rem; }
 }
