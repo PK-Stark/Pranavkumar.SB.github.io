@@ -10,7 +10,8 @@ let wordIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
 
-const typedText = document.querySelector(".typing-text span");
+// Ensure this matches the ID in your HTML
+const typedText = document.getElementById("typed");
 
 function typeEffect() {
   const currentWord = words[wordIndex];
@@ -20,8 +21,7 @@ function typeEffect() {
     charIndex++;
 
     if (charIndex === currentWord.length) {
-      setTimeout(() => isDeleting = true, 800);
-
+      setTimeout(() => isDeleting = true, 1200); // Wait before deleting
     }
   } else {
     typedText.textContent = currentWord.substring(0, charIndex - 1);
@@ -33,8 +33,9 @@ function typeEffect() {
     }
   }
 
-  setTimeout(typeEffect, isDeleting ? 35 : 65);
-
+  const speed = isDeleting ? 40 : 80;
+  setTimeout(typeEffect, speed);
 }
 
-typeEffect();
+// Start the effect
+document.addEventListener("DOMContentLoaded", typeEffect);
