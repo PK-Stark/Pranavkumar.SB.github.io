@@ -1,34 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>PranavKumar | Mechatronics Portfolio</title>
+    <title>Portfolio Website</title>
 </head>
 <body>
     <header>
         <a href="#home" class="logo">
-            <img src="images/ghost-logo.png" alt="GHOST Logo">
+          <img src="images/ghost-logo.png" alt="GHOST Logo">
         </a>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#experience">Experience</a>
-            <a href="#teaching">Teaching</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
 
-    <section class="home" id="home">
+
+
+        <nav>
+         <a href="#about">About</a>
+         <a href="#skills">Skills</a>
+         <a href="#experience">Experience</a>
+         <a href="#projects">Projects</a>
+         <a href="#education">Education</a>
+         <a href="#awards">Awards</a>
+         <a href="#contact">Contact</a>
+        </nav>
+
+    </header>
+    <section class="home">
         <div class="home-img">
-            <img src="main.jpg" alt="PranavKumar Profile">
+            <img src="main.jpg" alt="">
         </div>
         <div class="home-content">
             <h1>Hi, It's <span>PranavKumar</span></h1>
             <h3 class="typing-text">I work on <span id="typed"></span></h3>
-            <p>I design and build real-world engineering systems at the intersection of robotics, drones, automation, embedded electronics, and IoT — focused on reliable, field-ready solutions for industrial, safety, and defense applications.</p>
+            <p>I design and build real-world engineering systems at the intersection of robotics,
+drones, automation, embedded electronics, and IoT — focused on reliable,
+field-ready solutions for industrial, safety, and defense applications.</p>
             <div class="social-icons">
                 <a href="#"><i class="fa-brands fa-linkedin"></i></a>
                 <a href="#"><i class="fa-brands fa-github"></i></a>
@@ -38,122 +46,242 @@
             <a href="#" class="btn">Hire me</a>
         </div>
     </section>
+   <section class="about" id="about">
+  <h2 class="about-title">About Me</h2>
 
-    <section class="about" id="about">
-        <h2 class="about-title">About Me</h2>
-        <div class="about-container">
-            <div class="about-image">
-                <img src="images/about.png" alt="About Me Image">
-            </div>
-            <div class="about-content">
-                <p class="about-text">I am a <span class="highlight">Mechatronics Engineer</span> specializing in industrial automation and mixed-signal hardware design.</p>
-                <p class="about-text">My expertise includes integrating microcontrollers with high-pressure fluid dynamics and industrial peripherals, such as the ESP32-WROOM systems and high-pressure misting circuits.</p>
-                <p class="about-text">I prioritize modularity and serviceability in hardware projects, ensuring systems are field-ready and easily maintained.</p>
-            </div>
-            <div class="about-logo">
-                <img src="images/stark-tech.png" alt="Stark Tech Logo">
-            </div>
-        </div>
-    </section>
 
-    <section class="skills" id="skills">
-        <h2 class="section-title">SKILLS</h2>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <img src="images/skills/core-engineering.png" class="skill-icon" alt="Core icon">
-                <h3>Core Engineering</h3>
-                <ul>
-                    <li>Mechatronics Engineering</li>
-                    <li>Embedded Systems</li>
-                    <li>Electronics Design (KiCad, Altium)</li>
-                    <li>Material Science</li>
-                </ul>
-            </div>
-            <div class="skill-card">
-                <img src="images/skills/robotics-automation.png" class="skill-icon" alt="Robotics icon">
-                <h3>Robotics & Automation</h3>
-                <ul>
-                    <li>Industrial Automation</li>
-                    <li>Control Systems</li>
-                    <li>Actuators & Sensors</li>
-                    <li>High-Pressure Fluid Dynamics</li>
-                </ul>
-            </div>
-            <div class="skill-card">
-                <img src="images/skills/drones-iot.png" class="skill-icon" alt="Drone icon">
-                <h3>Drones & IoT</h3>
-                <ul>
-                    <li>UAV Systems</li>
-                    <li>IoT Architecture</li>
-                    <li>RFID Security Validation</li>
-                    <li>Wireless Communication</li>
-                </ul>
-            </div>
-            <div class="skill-card">
-                <img src="images/skills/software-tools.png" class="skill-icon" alt="Software icon">
-                <h3>Software & Prototyping</h3>
-                <ul>
-                    <li>C / C++ / Python</li>
-                    <li>Arduino / ESP32</li>
-                    <li>CAD & Rapid Prototyping</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+  <div class="about-container">
+    
+    <!-- IMAGE -->
+    <div class="about-image">
+      <img src="images/about.png" alt="About Me">
+    </div>
 
-    <section class="experience" id="experience">
-        <h2 class="section-title">EXPERIENCE</h2>
-        <div class="experience-row">
-            <div class="experience-card">
-                <h3>Founder & CEO</h3>
-                <span class="company">Stark Tech</span>
-                <span class="duration">Oct 2021 – Present</span>
-                <ul>
-                    <li>Developed automated aroma liquid diffusion systems for central AC.</li>
-                    <li>Designed high-pressure misting circuits with safety bypass loops.</li>
-                    <li>Implemented RFID-based security for consumable bottle validation.</li>
-                </ul>
-            </div>
-            <div class="experience-card">
-                <h3>Junior Research Fellow</h3>
-                <span class="company">Dr. MCET</span>
-                <span class="duration">Jun 2024 – Feb 2025</span>
-                <ul>
-                    <li>Conducted research in AI-assisted automation and robotics.</li>
-                    <li>Specialized in mixed-signal PCB design and system integration.</li>
-                </ul>
-            </div>
-            <div class="experience-card">
-                <h3>President</h3>
-                <span class="company">Students Research Council</span>
-                <span class="duration">Nov 2023 – May 2024</span>
-                <ul>
-                    <li>Led institutional research initiatives and mentored engineering teams.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+    <!-- TEXT (ALL PARAGRAPHS INSIDE THIS) -->
+    <div class="about-content">
+      <p class="about-text">
+        I am a <span class="highlight">Mechatronics Engineer</span> with a strong focus on building real-world engineering systems that integrate mechanical design, electronics, embedded systems, and software.
+      </p>
 
-    <section class="teaching-section" id="teaching">
-        <h2 class="section-title">TEACHING & OUTREACH</h2>
-        <div class="masonry">
-            <div class="teach-card large">
-                <h3>Technical Training & Workshops</h3>
-                <ul>
-                    <li>Trained over 130 students in Arduino, IoT, and Robotics.</li>
-                    <li>Focused on practical curriculum alignment and lab-ready demos.</li>
-                </ul>
-            </div>
-            <div class="teach-card large">
-                <h3>Mentorship</h3>
-                <ul>
-                    <li>Founder & Mentor of Students’ Innovation Guild (SIG).</li>
-                    <li>Guided product development for automated aroma diffusion prototypes.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+      <p class="about-text">
+        My work spans <span class="highlight">robotics, drones, automation, and IoT systems</span>, with an emphasis on reliability, safety, and deployable solutions rather than experimental prototypes.
+      </p>
 
-    <script src="script.js"></script>
+      <p class="about-text">
+        I have hands-on experience designing and developing field-ready systems for industrial, surveillance, safety, and defense-oriented applications.
+      </p>
+
+      <p class="about-text">
+        I am driven by complex engineering challenges and building systems that perform consistently in real-world environments.
+      </p>
+    </div>
+    <div class="about-logo">
+      <img src="images/stark-tech.png" alt="Stark Tech Logo">
+    </div>
+
+
+  </div>
+  <!-- ================= SKILLS SECTION ================= -->
+<section class="skills" id="skills">
+  <h2 class="section-title">SKILLS</h2>
+
+  <div class="skills-grid">
+
+    <div class="skill-card">
+      <img src="images/skills/core-engineering.png" class="skill-icon">
+      <h3>Core Engineering</h3>
+      <ul>
+        <li>Mechatronics Engineering</li>
+        <li>System Integration</li>
+        <li>Embedded Systems</li>
+        <li>Electronics Design</li>
+      </ul>
+    </div>
+
+    <div class="skill-card">
+      <img src="images/skills/robotics-automation.png" class="skill-icon">
+      <h3>Robotics & Automation</h3>
+      <ul>
+        <li>ROS</li>
+        <li>Industrial Automation</li>
+        <li>Control Systems</li>
+        <li>Actuators & Sensors</li>
+      </ul>
+    </div>
+
+    <div class="skill-card">
+      <img src="images/skills/drones-iot.png" class="skill-icon">
+      <h3>Drones & IoT</h3>
+      <ul>
+        <li>UAV Systems</li>
+        <li>Flight Controllers</li>
+        <li>IoT Architecture</li>
+        <li>Wireless Communication</li>
+      </ul>
+    </div>
+
+    <div class="skill-card">
+      <img src="images/skills/software-tools.png" class="skill-icon">
+      <h3>Software & Tools</h3>
+      <ul>
+        <li>C / C++</li>
+        <li>Python</li>
+        <li>Arduino / ESP32</li>
+        <li>Linux</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ================= EXPERIENCE SECTION ================= -->
+<section class="experience" id="experience">
+  <h2 class="section-title">EXPERIENCE</h2>
+
+  <div class="experience-row">
+
+    <div class="experience-card">
+      <h3>Founder & CEO</h3>
+      <span class="company">Stark Tech</span>
+      <span class="duration">Oct 2021 – Present</span>
+      <ul>
+        <li>Founded Stark Tech for real-world engineering systems</li>
+        <li>Led hardware & software development</li>
+        <li>Robotics, drones, automation & IoT</li>
+      </ul>
+    </div>
+
+    <div class="experience-card">
+      <h3>Junior Research Fellow</h3>
+      <span class="company">Dr. MCET</span>
+      <span class="duration">Jun 2024 – Feb 2025</span>
+      <ul>
+        <li>Applied robotics & embedded research</li>
+        <li>AI-assisted automation systems</li>
+        <li>Lab & student research support</li>
+      </ul>
+    </div>
+
+    <div class="experience-card">
+      <h3>President</h3>
+      <span class="company">Students Research Council</span>
+      <span class="duration">Nov 2023 – May 2024</span>
+      <ul>
+        <li>Led institutional research initiatives</li>
+        <li>Mentored innovation teams</li>
+        <li>Technical reviews & showcases</li>
+      </ul>
+    </div>
+
+    <div class="experience-card">
+      <h3>Innovative Engineer Trainee</h3>
+      <span class="company">FORGE Innovation & Ventures</span>
+      <span class="duration">Oct 2022 – Feb 2023</span>
+      <ul>
+        <li>Robotics prototyping & validation</li>
+        <li>ROS & embedded platforms</li>
+        <li>MVP execution support</li>
+      </ul>
+    </div>
+
+   <!-- ================= TEACHING / OUTREACH SECTION ================= -->
+<section class="teaching-section" id="teaching">
+
+  <h2 class="section-title">TEACHING, TRAINING & TECHNICAL OUTREACH</h2>
+
+  <div class="masonry">
+
+    <!-- Row 1 -->
+    <div class="teach-card large">
+      <div>
+        <h3>Technical Training & Workshops</h3>
+        <ul>
+          <li>Arduino & Embedded Systems</li>
+          <li>IoT Architecture & Wireless Communication</li>
+          <li>Robotics & Industrial Automation</li>
+          <li>Drone Technology & UAV Systems</li>
+          <li>3D Printing & Rapid Prototyping</li>
+          <li>Trained 130+ students through hands-on programs</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="teach-img small">
+      <!-- Replace with image -->
+      <!-- <img src="images/workshop.jpg" alt="Workshop"> -->
+    </div>
+
+    <!-- Row 2 (Offset) -->
+    <div class="teach-img small offset">
+      <!-- <img src="images/mentorship.jpg" alt="Mentorship"> -->
+    </div>
+
+    <div class="teach-card large">
+      <div>
+        <h3>Academic & Institutional Mentorship</h3>
+        <ul>
+          <li>Founder & Mentor — Students’ Innovation Guild (SIG)</li>
+          <li>Mentored junior engineers & innovation teams</li>
+          <li>Guided mini-projects & final-year projects</li>
+          <li>Product development & startup mentorship</li>
+          <li>Engineering design & problem-solving guidance</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Row 3 -->
+    <div class="teach-card large">
+      <div>
+        <h3>Guest Lectures & Seminars</h3>
+        <ul>
+          <li>Autonomous Underwater Vehicles (AUV)</li>
+          <li>UAVs, Drones & Defense Applications</li>
+          <li>Embedded AI & IoT Systems</li>
+          <li>Robotics in Industry</li>
+          <li>Engineering Entrepreneurship</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="teach-img small">
+      <!-- <img src="images/lecture.jpg" alt="Guest Lecture"> -->
+    </div>
+
+    <!-- Row 4 (Offset) -->
+    <div class="teach-img small offset">
+      <!-- <img src="images/curriculum.jpg" alt="Curriculum Development"> -->
+    </div>
+
+    <div class="teach-card large">
+      <div>
+        <h3>Curriculum & Resource Development</h3>
+        <ul>
+          <li>Practical curriculum alignment support</li>
+          <li>ATAL framework–oriented programs</li>
+          <li>Institutional technical training modules</li>
+          <li>Lab-ready demos & reusable learning resources</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- =============================================================== -->
+
+  </div>
+</section>
+
+
+  </div>
+</section>
+
+
+  </div>
+</section>
+
+
+
+<script src="script.js"></script>
 </body>
 </html>
