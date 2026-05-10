@@ -512,17 +512,18 @@ span{
   line-height: 1.5;
 }
 
-/* ========================= */
-/* TEACHING SECTION CLEAN UI */
-/* ========================= */
+/* ========================================= */
+/*     TEACHING / TRAINING SECTION CSS       */
+/* ========================================= */
 
 .teaching-section {
     width: 90%;
     max-width: 1300px;
-    margin: 120px auto 80px;
+    margin: 120px auto 80px auto;
 }
 
-/* ===== SECTION HEADING ===== */
+/* ===== SECTION TITLE ===== */
+
 .teaching-section .section-title {
     text-align: center;
     font-size: 3.2rem;
@@ -530,57 +531,69 @@ span{
     color: #ffffff;
     margin-bottom: 70px;
     letter-spacing: 1px;
+    position: relative;
 }
 
 .teaching-section .section-title::after {
     content: "";
     width: 60px;
     height: 3px;
-    background: #a53c3c; /* softer red */
+    background: #a53c3c;
     display: block;
     margin: 14px auto 0;
-    border-radius: 4px;
+    border-radius: 5px;
 }
 
-/* ===== MASONRY GRID ===== */
+/* ===== MASONRY LAYOUT ===== */
+
 .masonry {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 40px;
-
-    /* REMOVE FIXED HEIGHT */
-    /* grid-auto-rows: 200px; ❌ DELETE THIS */
+    align-items: start;
 }
 
 /* ===== LARGE CONTENT CARDS ===== */
+
 .teach-card.large {
     grid-column: span 3;
-    background: #111;
-    border: 1px solid rgba(165, 60, 60, 0.4);
-    border-radius: 16px;
+
+    background: #111111;
+    border: 1px solid rgba(165, 60, 60, 0.45);
+
+    border-radius: 18px;
+
     padding: 35px;
-    color: #fff;
 
-    height: auto;      /* KEY FIX */
-    min-height: 200px; /* keeps visual balance */
+    color: white;
+
+    height: auto;
+    min-height: 220px;
+
+    transition: 0.3s ease;
 }
-
 
 .teach-card.large:hover {
     transform: translateY(-5px);
     border-color: #a53c3c;
 }
 
-/* ===== SMALL IMAGE BLOCKS ===== */
+/* ===== SMALL IMAGE BOXES ===== */
+
 .teach-img.small {
     grid-column: span 1;
-    background: #141414;
-    border: 1px solid rgba(165, 60, 60, 0.4);
-    border-radius: 16px;
+
+    background: #151515;
+
+    border: 1px solid rgba(165, 60, 60, 0.45);
+
+    border-radius: 18px;
+
     overflow: hidden;
 
-    height: auto;
-    min-height: 200px;
+    min-height: 220px;
+
+    transition: 0.3s ease;
 }
 
 .teach-img.small:hover {
@@ -588,35 +601,99 @@ span{
     border-color: #a53c3c;
 }
 
+/* ===== IMAGE SETTINGS ===== */
+
 .teach-img.small img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
 }
 
-/* ===== OFFSET PATTERN ===== */
+/* ===== OFFSET BLOCKS ===== */
+
 .offset {
     grid-column-start: 2;
 }
 
-/* ===== TEXT STYLING ===== */
+/* ===== CARD CONTENT ===== */
+
 .teach-card h3 {
-    color: #a53c3c;
+    color: #b74b4b;
+
     font-size: 2.2rem;
-    margin-bottom: 16px;
+
+    margin-bottom: 18px;
+
+    font-weight: 600;
 }
 
 .teach-card ul {
-    padding-left: 20px;
+    padding-left: 22px;
 }
 
 .teach-card li {
-    margin-bottom: 8px;
-    line-height: 1.6;
-    font-size: 1.4rem;
-    color: #e0e0e0;
+    margin-bottom: 10px;
+
+    line-height: 1.7;
+
+    font-size: 1.45rem;
+
+    color: #e6e6e6;
+
+    word-wrap: break-word;
 }
 
+/* ========================================= */
+/*               RESPONSIVE                  */
+/* ========================================= */
+
+@media (max-width: 1100px) {
+
+    .masonry {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .teach-card.large {
+        grid-column: span 2;
+    }
+
+    .teach-img.small {
+        grid-column: span 1;
+    }
+
+    .offset {
+        grid-column-start: auto;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .teaching-section {
+        width: 94%;
+    }
+
+    .masonry {
+        grid-template-columns: 1fr;
+    }
+
+    .teach-card.large,
+    .teach-img.small {
+        grid-column: span 1;
+    }
+
+    .teach-card.large {
+        padding: 28px;
+    }
+
+    .teach-card h3 {
+        font-size: 1.9rem;
+    }
+
+    .teach-card li {
+        font-size: 1.3rem;
+    }
+}
 /* ================= RESPONSIVE ================= */
 
 @media (max-width: 1100px) {
